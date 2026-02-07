@@ -76,13 +76,15 @@ jobs:
             Esta herramienta es portable, pero para habilitar la **compresión** y generación de **imágenes**, requiere **Ghostscript**.
 
             ### 🪟 Windows
-            1. Descarga el instalador [Ghostscript (32 o 64 bit)](https://github.com/ArtifexSoftware/ghostpdl-downloads/releases/latest) (ej. `gs10060w32.exe`).
-            2. Instálalo y ve a su carpeta `bin`.
-            3. Copia `gswin32c.exe` y `gsdll32.dll` (o `gswin64c.exe` y `gsdll64.dll`) a la misma carpeta donde pongas `pdf_splitter.exe`.
+            1. Descarga el instalador desde [Artifex Ghostscript Downloads](https://github.com/ArtifexSoftware/ghostpdl-downloads/releases/latest).
+            2. Instala la versión de **32-bit** (`gs...w32.exe`) o **64-bit** (`gs...w64.exe`).
+            3. Ve a la carpeta de instalación (ej. `C:\Program Files\gs\gs... \bin`).
+            4. Copia los archivos ejecutables y DLL (`gswin32c.exe` + `gsdll32.dll` O `gswin64c.exe` + `gsdll64.dll`) a la misma carpeta donde pongas `pdf_splitter.exe`.
 
-                      ### 🐧 Linux
-                      * Ejecuta: `sudo apt install ghostscript`.
+            ### 🐧 Linux
+            * Ejecuta: `sudo apt install ghostscript`.
 
-                      ---
-                      📖 **[Ver documentación completa y ejemplos de uso (README)](https://github.com/${{ github.repository }}/blob/main/README.md)**
-                  env:          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+            ---
+            📖 **[Ver Guía Detallada "Para Ejecutar" (README)](https://github.com/${{ github.repository }}/blob/main/README.md#para-ejecutar-usuario-final)**
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
