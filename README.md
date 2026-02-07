@@ -17,7 +17,16 @@ Herramienta de alto rendimiento para dividir archivos PDF, comprimirlos y genera
 *   **Sistema Operativo:** Linux (x64) o Windows (x86/x64).
 *   **Ghostscript (Opcional pero Recomendado):**
     *   **Linux:** Tener `gs` instalado (`sudo apt install ghostscript`).
-    *   **Windows:** Colocar el ejecutable `gswin32c.exe` en la misma carpeta que la aplicación.
+    *   **Windows:**
+        1.  Ve a [ArtifexSoftware/ghostpdl-downloads](https://github.com/ArtifexSoftware/ghostpdl-downloads/releases/latest).
+        2.  Descarga el instalador según tu arquitectura:
+            *   Para 32-bit: **`gs10060w32.exe`**
+            *   Para 64-bit: **`gs10060w64.exe`**
+        3.  Ejecuta el instalador (puedes instalarlo temporalmente).
+        4.  Ve a la ruta de instalación (ej. `C:\Program Files\gs\gs10.06.0\bin`).
+        5.  Copia estos archivos a la carpeta de `pdf_splitter.exe`:
+            *   32-bit: **`gswin32c.exe`** y **`gsdll32.dll`**.
+            *   64-bit: **`gswin64c.exe`** y **`gsdll64.dll`**.
     *   *Nota:* Si no se encuentra Ghostscript, la aplicación funcionará pero no comprimirá los PDFs ni generará imágenes.
 
 ### Para Compilar (Desarrollador)
